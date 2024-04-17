@@ -2,17 +2,17 @@ import { useLayoutEffect } from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
 export default function AboutScreen({ navigation, route }) {
-  const { name } = route.params;
+  // const { name } = route.params;
 
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      title: name,
-    });
-  }, [navigation, name]);
+  // useLayoutEffect(() => {
+  //   navigation.setOptions({
+  //     title: name,
+  //   });
+  // }, [navigation, name]);
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>About {name}</Text>
-      <Button
+      <Text style={styles.text}>About</Text>
+      {/* <Button
         title="Update the name"
         onPress={() => navigation.setParams({ name: "Arda" })}
       />
@@ -21,7 +21,7 @@ export default function AboutScreen({ navigation, route }) {
         onPress={() => {
           navigation.navigate("Home", { result: "Data from About" });
         }}
-      />
+      /> */}
     </View>
   );
 }

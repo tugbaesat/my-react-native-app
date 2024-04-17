@@ -5,11 +5,11 @@ export default function HomeScreen({ navigation, route }) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Home Screen</Text>
-      <Button
+      {/* <Button
         title="About"
         onPress={() => navigation.navigate("About", { name: "Tugba" })}
       />
-      <Text style={styles.text}>Result: {route.params?.result}</Text>
+      <Text style={styles.text}>Result: {route.params?.result}</Text> */}
     </View>
   );
 }
