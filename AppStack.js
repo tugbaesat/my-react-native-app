@@ -6,17 +6,23 @@ import AboutScreen from "./screens/AboutScreen";
 
 const Stack = createNativeStackNavigator();
 
+export const AboutStack = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{ title: "Welcome Home" }}
+      />
+      <Stack.Screen name="About" component={AboutScreen} />
+    </Stack.Navigator>
+  );
+};
+
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{ title: "Welcome Home" }}
-        />
-        <Stack.Screen name="About" component={AboutScreen} />
-      </Stack.Navigator>
+      <AboutStack></AboutStack>
     </NavigationContainer>
   );
 }

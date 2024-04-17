@@ -4,6 +4,7 @@ import HomeScreen from "./screens/HomeScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import AboutScreen from "./screens/AboutScreen";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { AboutStack } from "./AppStack";
 
 const Tab = createBottomTabNavigator();
 
@@ -30,6 +31,10 @@ const App = () => {
           }}
         />
         <Tab.Screen name="About" component={AboutScreen} />
+        <Tab.Screen name="About Stack" component={AboutStack} options={{
+            headerShown:false
+        }}/>
+
       </Tab.Navigator>
     </NavigationContainer>
   );
